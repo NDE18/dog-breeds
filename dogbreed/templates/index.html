@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="title">
+    <p class="text-title">Dog Breed</p>
+</div>
+<div class="container-fluid ">
+    <div class="select-file">
+        <!-- <div class="col-auto">
+            <input class="form-control form-control-lg" id="formFileLg" type="file">
+        </div>
+        <div class="col-auto button">
+            <button type="submit" class="btn btn-primary">Send</button>
+        </div> -->
+        <!-- <div class="input-group">
+            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+            <button class="btn" type="button" id="inputGroupFileAddon04">Send</button>
+        </div> -->
+        <!-- <div class="custom-file">
+            <form method="POST" action="" enctype="multipart/form-data">
+                <input type="file" class="custom-file-input btn" id="exampleInputFile">
+                <label class="custom-file-label" for="exampleInputFile" data-browse="Browse">Select image... </label>
+            </form>
+        </div> -->
+        <form method="POST" action="" enctype="multipart/form-data" class='form-content'>
+            {{form.hidden_tag()}}
+            <div class="input-group">
+                    {{form.picture(class="form-control")}}
+                    {{form.submit(class="btn")}}
+                
+            </div>
+            
+        </form>
+    </div>
+</div>
+
+{% endblock %}
